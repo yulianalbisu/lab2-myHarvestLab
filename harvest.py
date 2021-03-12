@@ -16,6 +16,14 @@ class MelonType(object):
         self.is_seedless = is_seedless
         self.is_bestseller = is_bestseller
 
+musk = MelonTypes('muskmelon', 'musk', 1998, 'green', True, True)
+musk.add_pairing('mint')
+cas = MelonTypes('casaba', 'cas', 2003, 'orange', False, False)
+cas.add_pairing('strawberries and mint')
+cren = MelonTypes('crenshaw', 'cren', 1996, 'green', False, False)
+cren.add_pairing('proscuitto, love it!')
+yw = MelonTypes('Yellow Watermelon', 'yw', 2013, 'yellow', False, True)
+yw.add_pairing('ice cream')
 
         self.pairings = []
 
@@ -23,6 +31,7 @@ class MelonType(object):
 
     def add_pairing(self, pairing):
         """Add a food pairing to the instance's pairings list."""
+        self.pairing = pairing
 
         # Fill in the rest
 
